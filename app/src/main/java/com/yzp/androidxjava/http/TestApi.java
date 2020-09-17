@@ -1,8 +1,16 @@
 package com.yzp.androidxjava.http;
 
+import java.util.Map;
+
+import io.reactivex.Flowable;
 import io.reactivex.Observable;
+import okhttp3.RequestBody;
 import per.goweii.rxhttp.request.Api;
+import retrofit2.http.Header;
+import retrofit2.http.Multipart;
 import retrofit2.http.POST;
+import retrofit2.http.Part;
+import retrofit2.http.PartMap;
 import retrofit2.http.Query;
 
 public class TestApi extends Api {
@@ -33,6 +41,17 @@ public class TestApi extends Api {
                                                @Query("password") String password,
                                                @Query("scope") String scope,
                                                @Query("tenantid") String Tenant_id);
+
+        //图片上传
+//        @Multipart
+//        @POST("app/returns/upload/deliveryreceipt")
+//        Observable<ResponseBean> uploadReturnsStoreDeliveryReceipt(@retrofit2.http.Header("Authorization")
+//                                                                           String authorization,
+//                                                                   @retrofit2.http.Header("Token") String token,
+//                                                                   @Part("content") ResponseBean skuBean,
+//                                                                   @PartMap Map<String, RequestBody> map);
+
+
     }
 
 }

@@ -1,16 +1,12 @@
 package com.yzp.androidxjava;
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Toast;
 
 import com.yzp.androidxjava.base.BaseActivity;
-import com.yzp.androidxjava.base.BasePresenter;
 import com.yzp.androidxjava.base.BaseView;
-import com.yzp.androidxjava.http.ResponseBean;
-import com.yzp.androidxjava.mvp.MvpView;
 
 public class HomeActivity extends BaseActivity<HomePresenter> implements BaseView {
     @Override
@@ -26,7 +22,7 @@ public class HomeActivity extends BaseActivity<HomePresenter> implements BaseVie
 
     @Override
     protected void initView() {
-
+        findViewById(R.id.tv_log).setOnClickListener(this);
     }
 
     @Override
@@ -44,10 +40,10 @@ public class HomeActivity extends BaseActivity<HomePresenter> implements BaseVie
 
     }
 
+    @Override
+    protected void onIntervalClick(View v) {
+        super.onIntervalClick(v);
+        Toast.makeText(this,"1111",Toast.LENGTH_SHORT).show();
+    }
 
-    //    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_home);
-//    }
 }

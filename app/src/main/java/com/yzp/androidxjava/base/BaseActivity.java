@@ -12,7 +12,7 @@ import org.greenrobot.eventbus.EventBus;
  * @version v1.0.0
  * @date 2018/4/4-下午1:23
  */
-public abstract class BaseActivity<P extends BasePresenter> extends MvpActivity<P> {
+public abstract class BaseActivity<P extends BasePresenter<BaseView>> extends MvpActivity<P> {
     private LoadingDialog mLoadingDialog = null;
 
     /**

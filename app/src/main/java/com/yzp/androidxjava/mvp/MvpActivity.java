@@ -90,7 +90,7 @@ public abstract class MvpActivity<P extends MvpPresenter> extends SwipeBackActiv
     }
 
     /**
-     * 用注解绑定点击事件时，在该方法绑定
+     * 点击事件时，在该方法绑定
      */
     @Override
     public void onClick(final View v) {
