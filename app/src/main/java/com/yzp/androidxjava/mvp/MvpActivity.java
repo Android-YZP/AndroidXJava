@@ -14,7 +14,7 @@ import per.goweii.swipeback.SwipeBackActivity;
  */
 public abstract class MvpActivity<P extends MvpPresenter> extends SwipeBackActivity implements MvpView, View.OnClickListener {
 
-    public P presenter;
+    public P mPresenter;
 
     /**
      * 获取布局资源文件
@@ -60,9 +60,9 @@ public abstract class MvpActivity<P extends MvpPresenter> extends SwipeBackActiv
         if (getLayoutId() > 0) {
             setContentView(getLayoutId());
         }
-        presenter = initPresenter();
-        if (presenter != null) {
-            presenter.attach(this);
+        mPresenter = initPresenter();
+        if (mPresenter != null) {
+            mPresenter.attach(this);
         }
         initialize();
     }
@@ -74,8 +74,8 @@ public abstract class MvpActivity<P extends MvpPresenter> extends SwipeBackActiv
 
     @Override
     protected void onDestroy() {
-        if (presenter != null) {
-            presenter.detach();
+        if (mPresenter != null) {
+            mPresenter.detach();
         }
         super.onDestroy();
     }

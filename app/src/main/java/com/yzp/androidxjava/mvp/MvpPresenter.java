@@ -47,7 +47,7 @@ public abstract class MvpPresenter<V extends MvpView> {
         }
     }
 
-    public void dismissLoading() {
+    public void hideLoading() {
         if (baseView != null) {
             baseView.dismissLoadingDialog();
         }
