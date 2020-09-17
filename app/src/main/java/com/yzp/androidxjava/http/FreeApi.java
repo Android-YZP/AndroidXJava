@@ -1,6 +1,5 @@
 package com.yzp.androidxjava.http;
 
-import com.yzp.androidxjava.base.ResponseBean;
 import com.yzp.androidxjava.bean.RecommendPoetryBean;
 import com.yzp.androidxjava.bean.WeatherBean;
 

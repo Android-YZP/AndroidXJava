@@ -1,4 +1,4 @@
-package com.yzp.androidxjava.base;
+package com.yzp.androidxjava.http;
 
 import com.google.gson.annotations.SerializedName;
 

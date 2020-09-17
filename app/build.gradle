@@ -22,8 +22,9 @@ android {
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
-
     implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+    implementation 'com.github.goweii:AnyDialog:3.0.3'
+    implementation 'org.greenrobot:eventbus:3.1.1'
     api project(':rxhttp')
 
 }

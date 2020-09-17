@@ -1,4 +1,4 @@
-package com.yzp.androidxjava.base;
+package com.yzp.androidxjava.http;
 
 import androidx.annotation.NonNull;
 import com.yzp.androidxjava.http.FreeApi;

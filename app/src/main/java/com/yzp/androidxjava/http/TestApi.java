@@ -1,7 +1,5 @@
 package com.yzp.androidxjava.http;
 
-import com.yzp.androidxjava.base.ResponseBean;
-
 import io.reactivex.Observable;
 import per.goweii.rxhttp.request.Api;
 import retrofit2.http.POST;

@@ -11,6 +11,7 @@ import com.yzp.androidxjava.bean.Authorization;
 import com.yzp.androidxjava.bean.HexUtil;
 import com.yzp.androidxjava.http.FreeApi;
 import com.yzp.androidxjava.http.TestApi;
+import com.yzp.androidxjava.utils.SPUtils;
 
 import per.goweii.rxhttp.core.RxHttp;
 import per.goweii.rxhttp.core.RxLife;
@@ -39,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onSuccess(int code, String data) {
-                log(data+ code);
+                log(data + code);
             }
 
             @Override
@@ -70,7 +71,9 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onSuccess(int code, String data) {
-                log(data + code);
+                String token = SPUtils.getString("Token");
+                log(token);
+                SPUtils.put("Token", data);
             }
 
             @Override
