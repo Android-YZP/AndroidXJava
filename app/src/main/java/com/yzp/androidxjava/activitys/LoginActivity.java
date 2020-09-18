@@ -41,7 +41,6 @@ public class LoginActivity extends BaseActivity<LoginPresenter> implements BaseV
     protected void onIntervalClick(View v) {
         super.onIntervalClick(v);
         mPresenter.getToken();
-
     }
 
     @Override
