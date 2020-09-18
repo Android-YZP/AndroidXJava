@@ -27,9 +27,7 @@ public class TestApi extends Api {
 
     public interface Config {
         String BASE_URL = "http://40.73.25.84:8848";
-
         String BASE_URL_OTHER_NAME = "http://172.16.2.123:8848";
-
     }
 
     public interface Service {
