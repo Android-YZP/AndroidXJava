@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <com.yzp.androidxjava.base.SwipeMenuView
+    <com.yzp.androidxjava.customview.SwipeMenuView
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:clickable="true">
@@ -50,6 +50,6 @@
             android:text="删除"
             android:textColor="@android:color/white" />
 
-    </com.yzp.androidxjava.base.SwipeMenuView>
+    </com.yzp.androidxjava.customview.SwipeMenuView>
 </RelativeLayout>
 

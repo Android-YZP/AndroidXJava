@@ -1,4 +1,4 @@
-package com.yzp.androidxjava.base;
+package com.yzp.androidxjava.customview;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
