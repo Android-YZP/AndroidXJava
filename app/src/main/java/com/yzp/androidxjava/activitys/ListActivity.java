@@ -36,8 +36,6 @@ public class ListActivity extends BaseActivity<LoginPresenter> implements BaseVi
     @Override
     protected LoginPresenter initPresenter() {
         return new LoginPresenter();
-
-
     }
 
     @Override

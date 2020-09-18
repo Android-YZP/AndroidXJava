@@ -4,23 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
-import android.util.Log;
-import android.widget.TextView;
 
-import com.yzp.androidxjava.activitys.HomeActivity;
 import com.yzp.androidxjava.activitys.ListActivity;
-import com.yzp.androidxjava.activitys.LoginActivity;
-import com.yzp.androidxjava.bean.Authorization;
-import com.yzp.androidxjava.bean.HexUtil;
-import com.yzp.androidxjava.http.FreeApi;
-import com.yzp.androidxjava.http.TestApi;
-import com.yzp.androidxjava.utils.SPUtils;
-
-import per.goweii.rxhttp.core.RxHttp;
-import per.goweii.rxhttp.core.RxLife;
-import per.goweii.rxhttp.request.RxRequest;
-import per.goweii.rxhttp.request.exception.ExceptionHandle;
 
 public class MainActivity extends AppCompatActivity {
 

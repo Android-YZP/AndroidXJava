@@ -1,7 +1,8 @@
-package com.yzp.androidxjava.http;
+package com.yzp.androidxjava.api;
 
 import com.yzp.androidxjava.bean.RecommendPoetryBean;
 import com.yzp.androidxjava.bean.WeatherBean;
+import com.yzp.androidxjava.http.ResponseBean;
 
 import io.reactivex.Observable;
 import per.goweii.rxhttp.request.Api;

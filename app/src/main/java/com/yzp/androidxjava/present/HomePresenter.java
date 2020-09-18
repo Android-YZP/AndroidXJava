@@ -6,7 +6,7 @@ import com.yzp.androidxjava.bean.Authorization;
 import com.yzp.androidxjava.bean.HexUtil;
 import com.yzp.androidxjava.http.BaseRequest;
 import com.yzp.androidxjava.http.ResponseListener;
-import com.yzp.androidxjava.http.TestApi;
+import com.yzp.androidxjava.api.TestApi;
 
 import per.goweii.rxhttp.request.exception.ExceptionHandle;
 

@@ -1,4 +1,6 @@
-package com.yzp.androidxjava.http;
+package com.yzp.androidxjava.api;
+
+import com.yzp.androidxjava.http.ResponseBean;
 
 import java.util.Map;
 

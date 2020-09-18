@@ -1,8 +1,9 @@
 package com.yzp.androidxjava.http;
 
 import androidx.annotation.NonNull;
-import com.yzp.androidxjava.http.FreeApi;
-import com.yzp.androidxjava.http.TestApi;
+import com.yzp.androidxjava.api.FreeApi;
+import com.yzp.androidxjava.api.TestApi;
+
 import java.util.HashMap;
 import java.util.Map;
 import javax.net.ssl.HostnameVerifier;
