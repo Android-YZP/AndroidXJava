@@ -37,7 +37,7 @@ public class HomeActivity extends BaseActivity<HomePresenter> implements BaseVie
 
     @Override
     public void fail(String msg) {
-
+        Log.e("====", msg);
     }
 
     @Override

@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
                 String token = SPUtils.getString("Token");
                 log(token);
                 SPUtils.put("Token", data);
-                startActivity(new Intent(MainActivity.this, HomeActivity.class));
+
             }
 
             @Override
@@ -86,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onFinish() {
                 log("onFinish");
+                startActivity(new Intent(MainActivity.this, HomeActivity.class));
             }
         }));
 

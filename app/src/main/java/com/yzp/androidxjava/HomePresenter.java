@@ -12,7 +12,6 @@ import per.goweii.rxhttp.request.exception.ExceptionHandle;
 
 public class HomePresenter extends BasePresenter<BaseView> {
 
-
     public void getToken() {
         getRxLife().add(BaseRequest.request(TestApi.api().login(
                 Authorization.getInstance().getAuthorization(),
@@ -40,6 +39,7 @@ public class HomePresenter extends BasePresenter<BaseView> {
             @Override
             public void onError(ExceptionHandle e) {
                 if (isAttach()) {
+                    e.getException().printStackTrace();
                     getBaseView().fail(e.getMsg());
                 }
             }
