@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ScanEditText">
+        <!--hint-->
+        <attr name="hint" format="string" />
+        <!--用于扫码id,判断是从哪里的扫码-->
+        <attr name="scan_id" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="SwipeMenuView">
+        <attr name="swipeEnable" format="boolean"/>
+        <attr name="ios" format="boolean"/>
+        <attr name="leftSwipe" format="boolean"/>
+    </declare-styleable>
+</resources>
