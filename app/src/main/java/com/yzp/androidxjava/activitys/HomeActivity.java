@@ -1,12 +1,15 @@
-package com.yzp.androidxjava;
+package com.yzp.androidxjava.activitys;
 
 import androidx.annotation.Nullable;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import com.yzp.androidxjava.R;
 import com.yzp.androidxjava.base.BaseActivity;
 import com.yzp.androidxjava.base.BaseView;
+import com.yzp.androidxjava.present.HomePresenter;
+import com.yzp.androidxjava.utils.SPUtils;
 
 public class HomeActivity extends BaseActivity<HomePresenter> implements BaseView {
     @Override
@@ -27,7 +30,8 @@ public class HomeActivity extends BaseActivity<HomePresenter> implements BaseVie
 
     @Override
     protected void initData() {
-        mPresenter.getToken();
+        String token = SPUtils.getString("Token");
+        showToast(token);
     }
 
     @Override
@@ -43,7 +47,7 @@ public class HomeActivity extends BaseActivity<HomePresenter> implements BaseVie
     @Override
     protected void onIntervalClick(View v) {
         super.onIntervalClick(v);
-        Toast.makeText(this,"1111",Toast.LENGTH_SHORT).show();
+
     }
 
 }

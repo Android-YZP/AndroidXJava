@@ -1,4 +1,4 @@
-package com.yzp.androidxjava;
+package com.yzp.androidxjava.present;
 
 import com.yzp.androidxjava.base.BasePresenter;
 import com.yzp.androidxjava.base.BaseView;

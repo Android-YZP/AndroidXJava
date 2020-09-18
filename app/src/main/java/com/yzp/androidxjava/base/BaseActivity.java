@@ -1,6 +1,8 @@
 package com.yzp.androidxjava.base;
 
 import android.os.Bundle;
+import android.widget.Toast;
+
 import com.yzp.androidxjava.dialog.LoadingDialog;
 import com.yzp.androidxjava.mvp.MvpActivity;
 
@@ -8,9 +10,7 @@ import org.greenrobot.eventbus.EventBus;
 
 
 /**
- * @author Cuizhen
- * @version v1.0.0
- * @date 2018/4/4-下午1:23
+ *
  */
 public abstract class BaseActivity<P extends BasePresenter<BaseView>> extends MvpActivity<P> {
     private LoadingDialog mLoadingDialog = null;
@@ -57,6 +57,10 @@ public abstract class BaseActivity<P extends BasePresenter<BaseView>> extends Mv
         if (mLoadingDialog != null) {
             mLoadingDialog.dismiss();
         }
+    }
+
+    public void showToast(String msg) {
+        Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
     }
 
 }

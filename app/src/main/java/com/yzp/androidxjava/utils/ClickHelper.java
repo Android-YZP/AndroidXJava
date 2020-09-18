@@ -9,9 +9,6 @@ import java.util.List;
 
 /**
  * 防止连点，仅响应设置时长的第一次操作
- *
- * @author Cuizhen
- * @date 2018/5/28-下午5:18
  */
 public class ClickHelper {
 
