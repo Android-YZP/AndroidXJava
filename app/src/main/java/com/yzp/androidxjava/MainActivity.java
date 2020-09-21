@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.yzp.androidxjava.activitys.HomeActivity;
 import com.yzp.androidxjava.activitys.ListActivity;
 import com.yzp.androidxjava.activitys.LoginActivity;
+import com.yzp.androidxjava.activitys.UpdateActivity;
 
 public class MainActivity extends AppCompatActivity implements OnClickListener {
 
@@ -88,6 +89,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
             case R.id.tv_banner:
                 break;
             case R.id.tv_update:
+                startActivity(new Intent(MainActivity.this, UpdateActivity.class));
                 break;
             case R.id.tv_pic:
                 break;

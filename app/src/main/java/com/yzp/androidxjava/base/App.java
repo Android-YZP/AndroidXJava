@@ -13,5 +13,7 @@ public class App extends Application {
         super.onCreate();
         RxHttp.init(this);
         RxHttp.initRequest(new RxHttpRequestSetting());
+
+
     }
 }
