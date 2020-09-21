@@ -83,6 +83,7 @@
             android:textSize="25sp" />
 
         <TextView
+            android:id="@+id/tv_music"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -92,11 +93,52 @@
             android:textSize="25sp" />
 
         <TextView
+            android:id="@+id/tv_video"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:padding="15dp"
             android:text="视频播放"
+            android:textColor="#00f"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/tv_room"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="数据库Room"
+            android:textColor="#00f"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/tv_dao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="数据库GreenDao"
+            android:textColor="#00f"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/tv_them"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="白天和黑夜主题"
+            android:textColor="#00f"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/tv_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="对话框"
             android:textColor="#00f"
             android:textSize="25sp" />
 

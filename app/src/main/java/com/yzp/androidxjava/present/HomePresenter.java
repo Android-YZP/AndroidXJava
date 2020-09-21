@@ -32,7 +32,7 @@ public class HomePresenter extends BasePresenter<BaseView> {
             @Override
             public void onSuccess(int code, String data) {
                 if (isAttach()) {
-                    getBaseView().success(code, data);
+                    getBaseView().onSuccess(code, data);
                 }
             }
 
@@ -40,7 +40,7 @@ public class HomePresenter extends BasePresenter<BaseView> {
             public void onError(ExceptionHandle e) {
                 if (isAttach()) {
                     e.getException().printStackTrace();
-                    getBaseView().fail(e.getMsg());
+                    getBaseView().onFail(e.getMsg());
                 }
             }
 

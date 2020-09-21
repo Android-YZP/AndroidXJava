@@ -98,12 +98,12 @@ public class ListActivity extends BaseActivity<LoginPresenter> implements BaseVi
     }
 
     @Override
-    public void success(int code, String data) {
+    public void onSuccess(int code, String data) {
 
     }
 
     @Override
-    public void fail(String msg) {
+    public void onFail(String msg) {
 
     }
 }

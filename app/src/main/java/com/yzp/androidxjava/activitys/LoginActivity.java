@@ -44,14 +44,14 @@ public class LoginActivity extends BaseActivity<LoginPresenter> implements BaseV
     }
 
     @Override
-    public void success(int code, String data) {
+    public void onSuccess(int code, String data) {
         SPUtils.put("Token", data);
         startActivity(new Intent(getContext(), HomeActivity.class));
         finish();
     }
 
     @Override
-    public void fail(String msg) {
+    public void onFail(String msg) {
         showToast(msg);
     }
 }

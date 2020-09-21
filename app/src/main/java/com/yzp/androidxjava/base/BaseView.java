@@ -9,7 +9,7 @@ import java.util.List;
  */
 public interface BaseView extends MvpView {
 
-    void success(int code, String data);
+    void onSuccess(int code, String data);
 
-    void fail(String msg);
+    void onFail(String msg);
 }
