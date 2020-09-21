@@ -1,5 +1,7 @@
 package com.yzp.androidxjava.customview;
 
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -20,7 +22,7 @@ public class MyRefreshFoot extends BaseRefreshFoot {
     public static String REFRESH_HEADER_RELEASE = "释放立即立即加载";
     public static String REFRESH_HEADER_FINISH = "加载成功";//"刷新完成";
     public static String REFRESH_HEADER_FAILED = "加载失败";//"刷新失败";
-
+    private View mIv;
     private TextView mTitleText;
 
     public MyRefreshFoot(Context context) {
@@ -31,18 +33,21 @@ public class MyRefreshFoot extends BaseRefreshFoot {
         super(context, attrs);
         View view = LayoutInflater.from(context).inflate(R.layout.my_refresh_head, this);
         mTitleText = view.findViewById(R.id.txt);
+        mIv = view.findViewById(R.id.iv);
     }
 
     public MyRefreshFoot(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         View view = LayoutInflater.from(context).inflate(R.layout.my_refresh_head, this);
         mTitleText = view.findViewById(R.id.txt);
+        mIv = view.findViewById(R.id.iv);
     }
 
 
     @Override
     public void startAnimation(Animation animation) {
-        mTitleText.setText("开始动画");
+
+
     }
 
     @Override
@@ -61,6 +66,14 @@ public class MyRefreshFoot extends BaseRefreshFoot {
                 break;
             case Loading: //loading中
                 mTitleText.setText(REFRESH_HEADER_LOADING);
+
+                ObjectAnimator translationX1 = ObjectAnimator.ofFloat(mIv, "rotationX", 0, 7200);
+                ObjectAnimator scaleX1 = ObjectAnimator.ofFloat(mIv, "scaleX", 0.3f, 1.5f);
+                ObjectAnimator scaleY1 = ObjectAnimator.ofFloat(mIv, "scaleY", 0.3f, 1.5f);
+                AnimatorSet animatorSet = new AnimatorSet();
+                animatorSet.setDuration(2000);
+                animatorSet.playTogether(translationX1, scaleX1, scaleY1);
+                animatorSet.start();
                 break;
         }
     }

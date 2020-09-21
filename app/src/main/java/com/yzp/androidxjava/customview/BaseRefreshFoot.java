@@ -43,7 +43,6 @@ public abstract class BaseRefreshFoot extends LinearLayout implements RefreshFoo
 
     @Override
     public void onStartAnimator(@NonNull RefreshLayout refreshLayout, int height, int maxDragHeight) {
-
     }
 
     @Override

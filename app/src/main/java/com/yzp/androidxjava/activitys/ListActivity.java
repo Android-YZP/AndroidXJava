@@ -69,7 +69,7 @@ public class ListActivity extends BaseActivity<LoginPresenter> implements BaseVi
         refreshLayout.setOnLoadMoreListener(new OnLoadMoreListener() {
             @Override
             public void onLoadMore(@NonNull RefreshLayout refreshLayout) {
-                refreshLayout.finishLoadMoreWithNoMoreData();
+                refreshLayout.finishLoadMore(3000);
                 showToast("onLoadMore");
             }
         });

@@ -1,5 +1,7 @@
 package com.yzp.androidxjava.customview;
 
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -9,6 +11,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
 import com.scwang.smart.refresh.layout.api.RefreshHeader;
 import com.scwang.smart.refresh.layout.api.RefreshKernel;
 import com.scwang.smart.refresh.layout.api.RefreshLayout;
@@ -16,7 +19,7 @@ import com.scwang.smart.refresh.layout.constant.RefreshState;
 import com.scwang.smart.refresh.layout.constant.SpinnerStyle;
 import com.yzp.androidxjava.R;
 
-public class MyHead extends LinearLayout implements RefreshHeader {
+public class MyRefreshHead extends BaseRefreshHead {
 
     public static String REFRESH_HEADER_PULLING = "下拉可以刷新";//"下拉可以刷新";
     public static String REFRESH_HEADER_LOADING = "正在加载...";//"正在加载...";
@@ -24,29 +27,26 @@ public class MyHead extends LinearLayout implements RefreshHeader {
     public static String REFRESH_HEADER_FINISH = "刷新成功";//"刷新完成";
     public static String REFRESH_HEADER_FAILED = "刷新失败";//"刷新失败";
     private TextView mTitleText;
+    private View mIv;
 
-    public MyHead(Context context) {
+    public MyRefreshHead(Context context) {
         super(context);
     }
 
-    public MyHead(Context context, @Nullable AttributeSet attrs) {
+    public MyRefreshHead(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         View view = LayoutInflater.from(context).inflate(R.layout.my_refresh_head, this);
         mTitleText = view.findViewById(R.id.txt);
+        mIv = view.findViewById(R.id.iv);
     }
 
-    public MyHead(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public MyRefreshHead(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         View view = LayoutInflater.from(context).inflate(R.layout.my_refresh_head, this);
         mTitleText = view.findViewById(R.id.txt);
+        mIv = view.findViewById(R.id.iv);
     }
 
-
-    @NonNull
-    @Override
-    public View getView() {//获得视图
-        return this;
-    }
 
     @Override
     public void onStateChanged(@NonNull RefreshLayout refreshLayout, @NonNull RefreshState oldState, @NonNull RefreshState newState) {
@@ -63,9 +63,18 @@ public class MyHead extends LinearLayout implements RefreshHeader {
         }
     }
 
+
     @Override
     public void onStartAnimator(@NonNull RefreshLayout refreshLayout, int height, int maxDragHeight) {
         mTitleText.setText("动画开始");
+
+        ObjectAnimator translationX1 = ObjectAnimator.ofFloat(mIv, "rotationY", 0, 7200);
+        ObjectAnimator scaleX1 = ObjectAnimator.ofFloat(mIv, "scaleX", 0.3f, 1.5f);
+        ObjectAnimator scaleY1 = ObjectAnimator.ofFloat(mIv, "scaleY", 0.3f, 1.5f);
+        AnimatorSet animatorSet = new AnimatorSet();
+        animatorSet.setDuration(2000);
+        animatorSet.playTogether(translationX1, scaleX1, scaleY1);
+        animatorSet.start();
     }
 
     @Override
@@ -77,43 +86,5 @@ public class MyHead extends LinearLayout implements RefreshHeader {
         }
         return 500;
     }
-
-
-    @NonNull
-    @Override
-    public SpinnerStyle getSpinnerStyle() {
-        return SpinnerStyle.Translate;
-    }
-
-    @Override
-    public void setPrimaryColors(int... colors) {
-
-    }
-
-    @Override
-    public void onInitialized(@NonNull RefreshKernel kernel, int height, int maxDragHeight) {
-
-    }
-
-    @Override
-    public void onMoving(boolean isDragging, float percent, int offset, int height, int maxDragHeight) {
-
-    }
-
-    @Override
-    public void onReleased(@NonNull RefreshLayout refreshLayout, int height, int maxDragHeight) {
-
-    }
-
-    @Override
-    public void onHorizontalDrag(float percentX, int offsetX, int offsetMax) {
-
-    }
-
-    @Override
-    public boolean isSupportHorizontalDrag() {
-        return false;
-    }
-
 
 }
