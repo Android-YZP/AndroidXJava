@@ -26,6 +26,7 @@ public class ListActivity extends BaseActivity<LoginPresenter> implements BaseVi
     private RefreshLayout refreshLayout;
     private RecyclerView rv;
     private ListTestAdapter mAdapter;
+    private List<String> data;
 
     @Override
     protected int getLayoutId() {
@@ -46,7 +47,7 @@ public class ListActivity extends BaseActivity<LoginPresenter> implements BaseVi
 
     @Override
     protected void initData() {
-        List<String> data = new ArrayList<>();
+        data = new ArrayList<>();
         for (int i = 0; i < 20; i++) {
             data.add("1122321" + i);
         }
