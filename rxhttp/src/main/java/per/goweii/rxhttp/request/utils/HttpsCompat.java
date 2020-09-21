@@ -55,7 +55,7 @@ import okhttp3.OkHttpClient;
  * 1、服务器打开TLS1.1和TLS1.2
  * 2、在android4.4及以下版本默认不支持TLS1.2，需要开启对TLS1.2的支持
  *
- * @author Cuizhen
+ * @author YZP
  * @date 2019/1/4
  */
 public class HttpsCompat {

@@ -9,8 +9,8 @@ import java.util.concurrent.TimeUnit;
 /**
  * 描述：单位格式化
  *
- * @author Cuizhen
- * @date 2018/10/18
+ * @author YZP
+ *
  */
 public class UnitFormatUtils {
 

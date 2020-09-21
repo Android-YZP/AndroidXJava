@@ -18,12 +18,8 @@ import retrofit2.HttpException;
 /**
  * 集中处理请求中异常，可通过继承自定义，在
  * {@link RequestSetting#getExceptionHandle()}中返回
- *
- * @author CuiZhen
- * @date 2018/10/14
- * QQ: 302833254
- * E-mail: goweii@163.com
- * GitHub: https://github.com/goweii
+ * @author YZP
+
  */
 public class ExceptionHandle {
 

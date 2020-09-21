@@ -8,11 +8,7 @@ import retrofit2.http.Streaming;
 import retrofit2.http.Url;
 
 /**
- * @author CuiZhen
- * @date 2018/10/14
- * QQ: 302833254
- * E-mail: goweii@163.com
- * GitHub: https://github.com/goweii
+ * @author YZP
  */
 public interface DownloadApi{
     @Streaming

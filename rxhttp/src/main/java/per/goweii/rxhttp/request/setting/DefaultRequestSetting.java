@@ -12,8 +12,7 @@ import per.goweii.rxhttp.request.exception.ExceptionHandle;
 /**
  * 描述：网络请求设置（默认）
  *
- * @author Cuizhen
- * @date 2018/7/20
+ * @author YZP
  */
 public abstract class DefaultRequestSetting implements RequestSetting {
 

@@ -10,7 +10,7 @@ import java.lang.reflect.Type;
 /**
  * 描述：
  *
- * @author Cuizhen
+ * @author YZP
  * @date 2019/5/10
  */
 public class StringDeserializer implements JsonDeserializer<String> {

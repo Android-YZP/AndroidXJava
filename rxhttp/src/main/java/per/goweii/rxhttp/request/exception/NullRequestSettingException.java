@@ -1,8 +1,8 @@
 package per.goweii.rxhttp.request.exception;
 
 /**
- * @author Cuizhen
- * @date 2018/10/15
+ * @author YZP
+ *
  */
 public class NullRequestSettingException extends RuntimeException {
     public NullRequestSettingException() {

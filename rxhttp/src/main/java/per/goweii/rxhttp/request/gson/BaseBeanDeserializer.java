@@ -15,7 +15,7 @@ import per.goweii.rxhttp.request.base.BaseBean;
 /**
  * 描述：
  *
- * @author Cuizhen
+ * @author YZP
  * @date 2019/5/10
  */
 public class BaseBeanDeserializer implements JsonDeserializer<BaseBean> {

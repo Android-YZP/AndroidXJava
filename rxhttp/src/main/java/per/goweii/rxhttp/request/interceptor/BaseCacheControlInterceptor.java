@@ -16,8 +16,8 @@ import per.goweii.rxhttp.request.utils.NonNullUtils;
  * 描述：缓存过滤器
  * 在基类过滤掉非GET请求和未配置{@link Api.Header#CACHE_ALIVE_SECOND}的请求
  *
- * @author Cuizhen
- * @date 2018/10/18
+ * @author YZP
+ *
  */
 public class BaseCacheControlInterceptor implements Interceptor {
 

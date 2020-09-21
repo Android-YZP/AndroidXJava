@@ -17,8 +17,8 @@ import per.goweii.rxhttp.request.setting.RequestSetting;
 /**
  * 描述：
  *
- * @author Cuizhen
- * @date 2018/10/12
+ * @author YZP
+ *
  */
 @SuppressLint("StaticFieldLeak")
 public class RxHttp {

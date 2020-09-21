@@ -3,8 +3,7 @@ package per.goweii.rxhttp.request.base;
 /**
  * 描述：网络接口返回json格式对应的实体类
  *
- * @author Cuizhen
- * @date 2018/6/19
+ * @author YZP
  */
 public interface BaseResponse<E> {
 

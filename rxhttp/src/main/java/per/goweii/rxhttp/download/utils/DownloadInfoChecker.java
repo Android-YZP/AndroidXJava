@@ -13,8 +13,7 @@ import per.goweii.rxhttp.download.exception.SaveFileBrokenPointException;
 /**
  * 描述：
  *
- * @author Cuizhen
- * @date 2018/10/19
+ * @author YZP
  */
 public class DownloadInfoChecker {
 

@@ -16,8 +16,8 @@ import per.goweii.rxhttp.request.exception.ExceptionHandle;
 /**
  * 描述：网络请求设置
  *
- * @author Cuizhen
- * @date 2018/10/12
+ * @author YZP
+ *
  */
 public interface RequestSetting {
 

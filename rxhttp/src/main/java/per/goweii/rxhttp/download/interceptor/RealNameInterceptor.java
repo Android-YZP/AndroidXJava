@@ -11,8 +11,8 @@ import okhttp3.OkHttpClient;
 import okhttp3.Response;
 
 /**
- * @author Cuizhen
- * @date 2018/10/18
+ * @author YZP
+ *
  */
 public class RealNameInterceptor implements Interceptor {
 

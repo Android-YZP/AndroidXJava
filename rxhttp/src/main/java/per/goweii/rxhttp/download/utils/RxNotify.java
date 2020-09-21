@@ -12,8 +12,7 @@ import io.reactivex.schedulers.Schedulers;
 /**
  * 描述：
  *
- * @author Cuizhen
- * @date 2018/10/19
+ * @author YZP
  */
 public class RxNotify {
 

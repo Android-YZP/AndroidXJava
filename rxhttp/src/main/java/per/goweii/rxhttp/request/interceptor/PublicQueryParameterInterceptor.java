@@ -18,8 +18,7 @@ import per.goweii.rxhttp.request.utils.NonNullUtils;
 /**
  * 描述：添加公共请求参数
  *
- * @author Cuizhen
- * @date 2018/9/28
+ * @author YZP
  */
 public class PublicQueryParameterInterceptor implements Interceptor {
 

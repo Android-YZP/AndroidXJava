@@ -9,8 +9,8 @@ import java.util.Locale;
 /**
  * 描述：
  *
- * @author Cuizhen
- * @date 2018/10/12
+ * @author YZP
+ *
  */
 class FileUtils {
 

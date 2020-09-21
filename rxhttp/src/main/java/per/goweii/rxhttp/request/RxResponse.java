@@ -15,8 +15,7 @@ import per.goweii.rxhttp.request.exception.ExceptionHandle;
 /**
  * 描述：网络请求
  *
- * @author Cuizhen
- * @date 2018/9/9
+ * @author YZP
  */
 public class RxResponse<Resp> {
 

@@ -10,8 +10,8 @@ import per.goweii.rxhttp.download.DownloadInfo;
 /**
  * 描述：
  *
- * @author Cuizhen
- * @date 2018/10/15
+ * @author YZP
+ *
  */
 public interface DownloadSetting {
 

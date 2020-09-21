@@ -7,8 +7,8 @@ import per.goweii.rxhttp.request.base.BaseBean;
 /**
  * 描述：
  *
- * @author Cuizhen
- * @date 2018/10/13
+ * @author YZP
+ *
  */
 public class WeatherBean extends BaseBean {
 

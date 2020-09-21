@@ -22,8 +22,8 @@ import per.goweii.rxhttp.request.utils.NonNullUtils;
 /**
  * BaseUrl重定向
  *
- * @author Cuizhen
- * @date 2018/10/13
+ * @author YZP
+ *
  */
 public class BaseUrlRedirectInterceptor implements Interceptor {
 

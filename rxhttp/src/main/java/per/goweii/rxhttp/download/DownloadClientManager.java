@@ -13,8 +13,8 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 /**
  * 描述：
  *
- * @author Cuizhen
- * @date 2018/10/15
+ * @author YZP
+ *
  */
 class DownloadClientManager extends BaseClientManager {
 

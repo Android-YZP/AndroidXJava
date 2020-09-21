@@ -6,8 +6,8 @@ import java.util.Map;
 /**
  * 判断一个对象是否非空
  *
- * @author Cuizhen
- * @date 2018/10/15
+ * @author YZP
+ *
  */
 public class NonNullUtils {
 

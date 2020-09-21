@@ -3,8 +3,8 @@ package per.goweii.rxhttp.request.utils;
 /**
  * 描述：
  *
- * @author Cuizhen
- * @date 2018/10/13
+ * @author YZP
+ *
  */
 public class JsonFormatUtils {
     /**

@@ -12,8 +12,8 @@ import per.goweii.rxhttp.request.utils.NetUtils;
  * 描述：缓存过滤器
  * 用于为Request配置缓存策略
  *
- * @author Cuizhen
- * @date 2018/10/18
+ * @author YZP
+ *
  */
 public class CacheControlInterceptor extends BaseCacheControlInterceptor {
 

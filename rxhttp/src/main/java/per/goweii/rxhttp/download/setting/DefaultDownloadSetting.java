@@ -9,8 +9,8 @@ import per.goweii.rxhttp.download.DownloadInfo;
 /**
  * 描述：
  *
- * @author Cuizhen
- * @date 2018/10/16
+ * @author YZP
+ *
  */
 public class DefaultDownloadSetting implements DownloadSetting {
 

@@ -12,8 +12,8 @@ import retrofit2.http.Headers;
 import retrofit2.http.Query;
 
 /**
- * @author Cuizhen
- * @date 2018/10/13
+ * @author YZP
+ *
  */
 public class FreeApi extends Api {
 

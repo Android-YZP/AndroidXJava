@@ -13,8 +13,8 @@ import okio.Source;
 /**
  * 描述：
  *
- * @author Cuizhen
- * @date 2018/10/21
+ * @author YZP
+ *
  */
 public class DownloadResponseBody extends ResponseBody {
 

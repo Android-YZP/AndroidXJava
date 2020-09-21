@@ -16,8 +16,7 @@ import per.goweii.rxhttp.request.utils.NonNullUtils;
 /**
  * 描述：添加公共请求头
  *
- * @author Cuizhen
- * @date 2018/11/30
+ * @author YZP
  */
 public class PublicHeadersInterceptor implements Interceptor {
 

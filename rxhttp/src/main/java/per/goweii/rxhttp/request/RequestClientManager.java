@@ -30,8 +30,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 /**
  * 描述：构建Retrofit实例，采用单例模式，全局共享同一个Retrofit
  *
- * @author Cuizhen
- * @date 2018/10/15
+ * @author YZP
+ *
  */
 class RequestClientManager extends BaseClientManager {
 
