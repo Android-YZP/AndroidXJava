@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AndroidXJava</string>
+    <string name="simple_view_behavior">com.zoonref.viewbehavior.SimpleViewBehavior</string>
+    <string name="animation_view_behavior">com.zoonref.viewbehavior.AnimationViewBehavior</string>
 </resources>

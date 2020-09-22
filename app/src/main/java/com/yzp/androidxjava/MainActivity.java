@@ -6,143 +6,81 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.scwang.smart.refresh.layout.api.RefreshLayout;
 import com.yzp.androidxjava.activitys.BannerActivity;
-import com.yzp.androidxjava.activitys.HomeActivity;
 import com.yzp.androidxjava.activitys.ListActivity;
 import com.yzp.androidxjava.activitys.LoginActivity;
 import com.yzp.androidxjava.activitys.UpdateActivity;
 import com.yzp.androidxjava.activitys.ViewActivity;
+import com.yzp.androidxjava.adapter.ListTestAdapter;
+import com.yzp.androidxjava.adapter.MainAdapter;
+import com.yzp.androidxjava.base.BaseActivity;
+import com.yzp.androidxjava.base.BaseListAdapter;
+import com.yzp.androidxjava.base.BasePresenter;
+import com.yzp.androidxjava.base.BaseView;
+import com.yzp.androidxjava.bean.MainBean;
 
-public class MainActivity extends AppCompatActivity implements OnClickListener {
+import java.util.ArrayList;
+import java.util.List;
 
-    /**
-     * 网络
-     */
-    private TextView mTvNet;
-    /**
-     * 列表
-     */
-    private TextView mTvList;
-    /**
-     * 轮播图
-     */
-    private TextView mTvBanner;
-    /**
-     * 版本更新
-     */
-    private TextView mTvUpdate;
-    /**
-     * 共享View
-     */
-    private TextView mTvPic;
-    /**
-     * 权限申请
-     */
-    private TextView mTvPer;
-    /**
-     * 版本适配
-     */
-    private TextView mTvVersion;
-    /**
-     * 音频播放
-     */
-    private TextView mTvMusic;
-    /**
-     * 视频播放
-     */
-    private TextView mTvVideo;
-    /**
-     * 数据库Room
-     */
-    private TextView mTvRoom;
-    /**
-     * 数据库GreenDao
-     */
-    private TextView mTvDao;
-    /**
-     * 白天和黑夜主题
-     */
-    private TextView mTvThem;
-    /**
-     * 对话框
-     */
-    private TextView mTvDialog;
+public class MainActivity extends BaseActivity<BasePresenter<BaseView>> implements BaseView {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        initView();
-    }
+
+    private RecyclerView rv;
+    private MainAdapter mAdapter;
+    private List<MainBean> data = new ArrayList<>();
 
 
     @Override
-    public void onClick(View view) {
-        switch (view.getId()) {
-
-            case R.id.tv_net:
-                startActivity(new Intent(MainActivity.this, LoginActivity.class));
-                break;
-            case R.id.tv_list:
-                startActivity(new Intent(MainActivity.this, ListActivity.class));
-                break;
-            case R.id.tv_banner:
-                startActivity(new Intent(MainActivity.this, BannerActivity.class));
-                break;
-            case R.id.tv_update:
-                startActivity(new Intent(MainActivity.this, UpdateActivity.class));
-                break;
-            case R.id.tv_pic:
-                startActivity(new Intent(MainActivity.this, ViewActivity.class));
-                break;
-            case R.id.tv_per:
-                break;
-            case R.id.tv_version:
-                break;
-            case R.id.tv_music:
-                break;
-            case R.id.tv_video:
-                break;
-            case R.id.tv_room:
-                break;
-            case R.id.tv_dao:
-                break;
-            case R.id.tv_them:
-                break;
-            case R.id.tv_dialog:
-                break;
-        }
+    protected int getLayoutId() {
+        return R.layout.activity_main;
     }
 
+    @Nullable
+    @Override
+    protected BasePresenter<BaseView> initPresenter() {
+        return null;
+    }
 
-    private void initView() {
-        mTvNet = (TextView) findViewById(R.id.tv_net);
-        mTvNet.setOnClickListener(this);
-        mTvList = (TextView) findViewById(R.id.tv_list);
-        mTvList.setOnClickListener(this);
-        mTvBanner = (TextView) findViewById(R.id.tv_banner);
-        mTvBanner.setOnClickListener(this);
-        mTvUpdate = (TextView) findViewById(R.id.tv_update);
-        mTvUpdate.setOnClickListener(this);
-        mTvPic = (TextView) findViewById(R.id.tv_pic);
-        mTvPic.setOnClickListener(this);
-        mTvPer = (TextView) findViewById(R.id.tv_per);
-        mTvPer.setOnClickListener(this);
-        mTvVersion = (TextView) findViewById(R.id.tv_version);
-        mTvVersion.setOnClickListener(this);
-        mTvMusic = (TextView) findViewById(R.id.tv_music);
-        mTvMusic.setOnClickListener(this);
-        mTvVideo = (TextView) findViewById(R.id.tv_video);
-        mTvVideo.setOnClickListener(this);
-        mTvRoom = (TextView) findViewById(R.id.tv_room);
-        mTvRoom.setOnClickListener(this);
-        mTvDao = (TextView) findViewById(R.id.tv_dao);
-        mTvDao.setOnClickListener(this);
-        mTvThem = (TextView) findViewById(R.id.tv_them);
-        mTvThem.setOnClickListener(this);
-        mTvDialog = (TextView) findViewById(R.id.tv_dialog);
-        mTvDialog.setOnClickListener(this);
+    @Override
+    protected void initView() {
+        rv = (RecyclerView) findViewById(R.id.rv);
+    }
+
+    @Override
+    protected void initData() {
+        data.add(new MainBean("网络", LoginActivity.class));
+        data.add(new MainBean("列表", ListActivity.class));
+        data.add(new MainBean("轮播图", BannerActivity.class));
+        data.add(new MainBean("版本更新", UpdateActivity.class));
+        data.add(new MainBean("共享元素", ViewActivity.class));
+
+        LinearLayoutManager gridLayoutManager = new LinearLayoutManager(getContext());
+        rv.setLayoutManager(gridLayoutManager);
+        mAdapter = new MainAdapter(getContext());
+        rv.setAdapter(mAdapter);
+        mAdapter.setDataList(data);
+
+        mAdapter.setOnItemClickListener(new BaseListAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                startActivity(new Intent(MainActivity.this, data.get(position).getaClass()));
+            }
+        });
+    }
+
+    @Override
+    public void onSuccess(int code, String data) {
+
+    }
+
+    @Override
+    public void onFail(String msg) {
+
     }
 }

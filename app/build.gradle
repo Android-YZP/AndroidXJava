@@ -31,6 +31,7 @@ dependencies {
     implementation 'org.greenrobot:eventbus:3.1.1'
     api project(':rxhttp')
     implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
 
     //列表框架
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
