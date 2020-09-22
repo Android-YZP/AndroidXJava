@@ -1,12 +1,9 @@
 package com.yzp.androidxjava.activitys;
 
 import androidx.annotation.Nullable;
-
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import com.yzp.androidxjava.R;
 import com.yzp.androidxjava.base.BaseActivity;
 import com.yzp.androidxjava.base.BaseView;

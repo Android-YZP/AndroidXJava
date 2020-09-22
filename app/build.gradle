@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.yzp.androidxjava"
-        minSdkVersion 21
+        minSdkVersion 19
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -17,6 +17,10 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 
@@ -41,5 +45,6 @@ dependencies {
 
     //版本更新
     implementation 'com.github.NewHuLe:AppUpdate:v1.7'
-
+    //轮播图
+    implementation 'com.youth.banner:banner:2.1.0'
 }

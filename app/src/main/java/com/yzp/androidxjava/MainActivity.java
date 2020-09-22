@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.yzp.androidxjava.activitys.BannerActivity;
 import com.yzp.androidxjava.activitys.HomeActivity;
 import com.yzp.androidxjava.activitys.ListActivity;
 import com.yzp.androidxjava.activitys.LoginActivity;
@@ -87,6 +88,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
                 startActivity(new Intent(MainActivity.this, ListActivity.class));
                 break;
             case R.id.tv_banner:
+                startActivity(new Intent(MainActivity.this, BannerActivity.class));
                 break;
             case R.id.tv_update:
                 startActivity(new Intent(MainActivity.this, UpdateActivity.class));
