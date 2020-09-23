@@ -1,30 +1,21 @@
 package com.yzp.androidxjava;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.TextView;
-
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.scwang.smart.refresh.layout.api.RefreshLayout;
 import com.yzp.androidxjava.activitys.BannerActivity;
 import com.yzp.androidxjava.activitys.ListActivity;
 import com.yzp.androidxjava.activitys.LoginActivity;
 import com.yzp.androidxjava.activitys.UpdateActivity;
 import com.yzp.androidxjava.activitys.ViewActivity;
-import com.yzp.androidxjava.adapter.ListTestAdapter;
 import com.yzp.androidxjava.adapter.MainAdapter;
 import com.yzp.androidxjava.base.BaseActivity;
 import com.yzp.androidxjava.base.BaseListAdapter;
 import com.yzp.androidxjava.base.BasePresenter;
 import com.yzp.androidxjava.base.BaseView;
 import com.yzp.androidxjava.bean.MainBean;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -58,6 +49,19 @@ public class MainActivity extends BaseActivity<BasePresenter<BaseView>> implemen
         data.add(new MainBean("列表", ListActivity.class));
         data.add(new MainBean("轮播图", BannerActivity.class));
         data.add(new MainBean("版本更新", UpdateActivity.class));
+        data.add(new MainBean("共享元素", ViewActivity.class));
+        data.add(new MainBean("共享元素", ViewActivity.class));
+        data.add(new MainBean("共享元素", ViewActivity.class));
+        data.add(new MainBean("共享元素", ViewActivity.class));
+        data.add(new MainBean("共享元素", ViewActivity.class));
+        data.add(new MainBean("共享元素", ViewActivity.class));
+        data.add(new MainBean("共享元素", ViewActivity.class));
+        data.add(new MainBean("共享元素", ViewActivity.class));
+        data.add(new MainBean("共享元素", ViewActivity.class));
+        data.add(new MainBean("共享元素", ViewActivity.class));
+        data.add(new MainBean("共享元素", ViewActivity.class));
+        data.add(new MainBean("共享元素", ViewActivity.class));
+        data.add(new MainBean("共享元素", ViewActivity.class));
         data.add(new MainBean("共享元素", ViewActivity.class));
 
         LinearLayoutManager gridLayoutManager = new LinearLayoutManager(getContext());
