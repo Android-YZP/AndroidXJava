@@ -12,7 +12,7 @@ public class BaseViewHolder extends RecyclerView.ViewHolder {
 
     public BaseViewHolder(android.view.View itemView) {
         super(itemView);
-        this.views = new android.util.SparseArray<>();
+
     }
 
     @SuppressWarnings("unchecked")
